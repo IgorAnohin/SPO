@@ -20,7 +20,36 @@ include parity.frt
 ;
 
 
+include prime.frt
+: 1_is_not_prime_test
+    ." 1 is not a prime: "
+    1 prime 0 test
+;
+
+: 2_is_prime_test
+    ." 2 is a prime: "
+    2 prime 1 test
+;
+
+: 5_is_prime_test
+    ." 5 is a prime: "
+    5 prime 1 test
+;
+
+: 6_is_not_prime_test
+    ." 6 is not a prime: "
+    6 prime 0 test
+;
+
+
 ." Parity:" cr
 1_is_odd_test
 2_is_even_test
+cr
+
+." Primary:" cr
+1_is_not_prime_test
+2_is_prime_test
+5_is_prime_test
+6_is_not_prime_test
 cr
