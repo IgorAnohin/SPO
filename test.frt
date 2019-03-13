@@ -41,6 +41,16 @@ include prime.frt
     6 prime 0 test
 ;
 
+include concat.frt
+: hello_plus_world_concat_test
+    ." 'Hello ' + 'world' = 'Hello world': "
+    m" Hello "
+    m" world"
+    concat
+    m" Hello world"
+    string-eq 1 test
+;
+
 
 ." Parity:" cr
 1_is_odd_test
@@ -52,4 +62,8 @@ cr
 2_is_prime_test
 5_is_prime_test
 6_is_not_prime_test
+cr
+
+." Concat:" cr
+hello_plus_world_concat_test
 cr
