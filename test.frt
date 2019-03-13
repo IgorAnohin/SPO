@@ -51,6 +51,20 @@ include concat.frt
     string-eq 1 test
 ;
 
+include primarnost.frt
+: 4_ne_primarnoe_test
+    ." 4 ne primarnoe test: "
+    4 primarnost 0 test
+;
+: 20_ne_primarnoe_test
+    ." 20 ne primarnoe test: "
+    20 primarnost 0 test
+;
+: 15_primarnoe_test
+    ." 15 primarnoe test: "
+    15 primarnost 1 test
+;
+
 
 ." Parity:" cr
 1_is_odd_test
@@ -66,4 +80,10 @@ cr
 
 ." Concat:" cr
 hello_plus_world_concat_test
+cr
+
+." Primarnost:" cr
+4_ne_primarnoe_test
+20_ne_primarnoe_test
+15_primarnoe_test
 cr
