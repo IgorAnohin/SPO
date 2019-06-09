@@ -1,4 +1,7 @@
-%include 'words/words.inc'
+%include 'words/arithmetic.inc'
+%include 'words/logic_bitwise.inc'
+%include 'words/data_stack.inc'
+%include 'words/return_stack.inc'
 %include 'words/wrappers.inc'
 %include 'words/colon.inc'
 %include 'words/system.inc'
